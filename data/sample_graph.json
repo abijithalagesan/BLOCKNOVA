@@ -1,0 +1,20 @@
+{
+  "observed_through": "2026-09-19T00:00:00+00:00",
+  "coverage": 0.96,
+  "nodes": [
+    {"address": "0x1111111111111111111111111111111111111111", "kind": "wallet", "intrinsic_risk_label": "unknown"},
+    {"address": "0x2222222222222222222222222222222222222222", "kind": "wallet", "intrinsic_risk_label": "unknown"},
+    {"address": "0x3333333333333333333333333333333333333333", "kind": "wallet", "intrinsic_risk_label": "unknown"},
+    {"address": "0x4444444444444444444444444444444444444444", "kind": "wallet", "intrinsic_risk_label": "unknown"},
+    {"address": "0x5555555555555555555555555555555555555555", "kind": "wallet", "intrinsic_risk_label": "unknown"}
+  ],
+  "edges": [
+    {"source": "0x1111111111111111111111111111111111111111", "target": "0x2222222222222222222222222222222222222222", "edge_type": "transfer", "value": 8.0, "timestamp": "2026-08-20T00:00:00+00:00", "evidence_source": "local_test_fixture"},
+    {"source": "0x2222222222222222222222222222222222222222", "target": "0x3333333333333333333333333333333333333333", "edge_type": "token_transfer", "value": 7.0, "timestamp": "2026-08-21T00:00:00+00:00", "evidence_source": "local_test_fixture"},
+    {"source": "0x4444444444444444444444444444444444444444", "target": "0x5555555555555555555555555555555555555555", "edge_type": "transfer", "value": 1.0, "timestamp": "2026-08-20T00:00:00+00:00", "evidence_source": "local_test_fixture"}
+  ],
+  "signals": [
+    {"address": "0x3333333333333333333333333333333333333333", "signal_type": "confirmed_malicious", "severity": 1.0, "source": "local_test_fixture", "evidence": {"flag": "confirmed_malicious", "event_id": "fixture-malicious-1", "description": "known malicious sample node"}, "observed_at": "2026-08-21T00:00:00+00:00", "confidence": 1.0},
+    {"address": "0x5555555555555555555555555555555555555555", "signal_type": "unlimited_allowance", "severity": 0.8, "source": "local_permission_fixture", "evidence": {"token": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "spender": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "allowance": "115792089237316195423570985008687907853269984665640564039457584007913129639935", "event_id": "fixture-allowance-1"}, "observed_at": "2026-08-20T00:00:00+00:00", "confidence": 1.0}
+  ]
+}
